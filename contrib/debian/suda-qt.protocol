@@ -1,0 +1,11 @@
+[Protocol]
+exec=suda-qt '%u'
+protocol=suda
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

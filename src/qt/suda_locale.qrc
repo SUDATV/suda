@@ -1,0 +1,17 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="de">locale/suda_de.qm</file>
+        <file alias="en">locale/suda_en.qm</file>
+        <file alias="en_US">locale/suda_en_US.qm</file>
+        <file alias="es">locale/suda_es.qm</file>
+        <file alias="fr_FR">locale/suda_fr_FR.qm</file>
+        <file alias="hr_HR">locale/suda_hr_HR.qm</file>
+        <file alias="it">locale/suda_it.qm</file>
+        <file alias="ko_KR">locale/suda_ko_KR.qm</file>
+        <file alias="nl">locale/suda_nl.qm</file>
+        <file alias="pl">locale/suda_pl.qm</file>
+        <file alias="ru">locale/suda_ru.qm</file>
+        <file alias="tr">locale/suda_tr.qm</file>
+        <file alias="zh_CN">locale/suda_zh_CN.qm</file>
+    </qresource>
+</RCC>

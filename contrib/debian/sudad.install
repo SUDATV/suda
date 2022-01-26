@@ -1,0 +1,3 @@
+usr/local/bin/sudad usr/bin
+usr/local/bin/suda-cli usr/bin
+debian/examples/suda.conf etc/suda

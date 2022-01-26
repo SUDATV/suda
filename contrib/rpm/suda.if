@@ -1,0 +1,157 @@
+
+## <summary>policy for suda</summary>
+
+
+########################################
+## <summary>
+##	Transition to suda.
+## </summary>
+## <param name="domain">
+## <summary>
+##	Domain allowed to transition.
+## </summary>
+## </param>
+#
+interface(`suda_domtrans',`
+	gen_require(`
+		type suda_t, suda_exec_t;
+	')
+
+	corecmd_search_bin($1)
+	domtrans_pattern($1, suda_exec_t, suda_t)
+')
+
+
+########################################
+## <summary>
+##	Execute suda server in the suda domain.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`suda_initrc_domtrans',`
+	gen_require(`
+		type suda_initrc_exec_t;
+	')
+
+	init_labeled_script_domtrans($1, suda_initrc_exec_t)
+')
+
+
+########################################
+## <summary>
+##	Search suda lib directories.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`suda_search_lib',`
+	gen_require(`
+		type suda_var_lib_t;
+	')
+
+	allow $1 suda_var_lib_t:dir search_dir_perms;
+	files_search_var_lib($1)
+')
+
+########################################
+## <summary>
+##	Read suda lib files.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`suda_read_lib_files',`
+	gen_require(`
+		type suda_var_lib_t;
+	')
+
+	files_search_var_lib($1)
+	read_files_pattern($1, suda_var_lib_t, suda_var_lib_t)
+')
+
+########################################
+## <summary>
+##	Manage suda lib files.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`suda_manage_lib_files',`
+	gen_require(`
+		type suda_var_lib_t;
+	')
+
+	files_search_var_lib($1)
+	manage_files_pattern($1, suda_var_lib_t, suda_var_lib_t)
+')
+
+########################################
+## <summary>
+##	Manage suda lib directories.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`suda_manage_lib_dirs',`
+	gen_require(`
+		type suda_var_lib_t;
+	')
+
+	files_search_var_lib($1)
+	manage_dirs_pattern($1, suda_var_lib_t, suda_var_lib_t)
+')
+
+
+########################################
+## <summary>
+##	All of the rules required to administrate
+##	a suda environment
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+## <param name="role">
+##	<summary>
+##	Role allowed access.
+##	</summary>
+## </param>
+## <rolecap/>
+#
+interface(`suda_admin',`
+	gen_require(`
+		type suda_t;
+		type suda_initrc_exec_t;
+		type suda_var_lib_t;
+	')
+
+	allow $1 suda_t:process { ptrace signal_perms };
+	ps_process_pattern($1, suda_t)
+
+	suda_initrc_domtrans($1)
+	domain_system_change_exemption($1)
+	role_transition $2 suda_initrc_exec_t system_r;
+	allow $2 system_r;
+
+	files_search_var_lib($1)
+	admin_pattern($1, suda_var_lib_t)
+
+')
+

@@ -1,0 +1,14 @@
+QT_TS = \
+  qt/locale/suda_de.ts \
+  qt/locale/suda_en.ts \
+  qt/locale/suda_en_US.ts \
+  qt/locale/suda_es.ts \
+  qt/locale/suda_fr_FR.ts \
+  qt/locale/suda_hr_HR.ts \
+  qt/locale/suda_it.ts \
+  qt/locale/suda_ko_KR.ts \
+  qt/locale/suda_nl.ts \
+  qt/locale/suda_pl.ts \
+  qt/locale/suda_ru.ts \
+  qt/locale/suda_tr.ts \
+  qt/locale/suda_zh_CN.ts

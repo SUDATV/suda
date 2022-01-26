@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+#  sudad The SUDA_Coin server.
+#
+#
+# chkconfig: 345 80 20
+# description: sudad
+# processname: sudad
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/sudad, see below
+if [ -f /etc/sysconfig/sudad ]; then
+        . /etc/sysconfig/sudad
+fi
+
+RETVAL=0
+
+prog=sudad
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/sudad
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/sudad}
+
+# sudad defaults to /usr/bin/sudad, override with BITCOIND_BIN
+bitcoind=${BITCOIND_BIN-/usr/bin/sudad}
+
+# sudad opts default to -disablewallet, override with BITCOIND_OPTS
+bitcoind_opts=${BITCOIND_OPTS}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $bitcoind $bitcoind_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac

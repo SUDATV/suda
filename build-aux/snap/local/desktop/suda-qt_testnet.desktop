@@ -1,0 +1,16 @@
+# http://standards.freedesktop.org/desktop-entry-spec/desktop-entry-spec-1.0.html
+
+[Desktop Entry]
+Encoding=UTF-8
+Name=SUDA_Coin
+Comment=SUDA_Coin QT test network
+GenericName=SUDA_Coin Digital Currency QT client testnet network
+Exec=suda_coin-core.qt-testnet %u
+Terminal=false
+Type=Application
+Icon=${SNAP}/share/pixmaps/suda_coin_testnet.png
+MimeType=x-scheme-handler/suda;
+Categories=X-Office;X-Finance;
+Keywords=internet;suda_coin;zsuda;tsuda;core;wallet;qt;testnet;snap;launchpad;crypto;digital;currency;coin;token;zerocoin;
+Version=1.0
+Name[en_IN]=suda-qt_testnet.desktop

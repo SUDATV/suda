@@ -1,0 +1,6 @@
+usr/local/bin/suda-qt usr/bin
+share/pixmaps/suda32.xpm usr/share/pixmaps
+share/pixmaps/suda16.xpm usr/share/pixmaps
+share/pixmaps/suda128.png usr/share/pixmaps
+debian/suda-qt.desktop usr/share/applications
+debian/suda-qt.protocol usr/share/kde4/services/

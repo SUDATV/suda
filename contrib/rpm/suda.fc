@@ -1,0 +1,8 @@
+/usr/bin/suda-cli		--	gen_context(system_u:object_r:suda_exec_t,s0)
+/usr/sbin/sudad		--	gen_context(system_u:object_r:suda_exec_t,s0)
+/usr/lib(64)?/suda/sudad		--	gen_context(system_u:object_r:suda_exec_t,s0)
+
+/etc/suda(/.*)?		gen_context(system_u:object_r:suda_conf_t,s0)
+/var/lib/suda(/.*)?		gen_context(system_u:object_r:suda_var_lib_t,s0)
+
+(/var)?/run/sudad(/.*)?   gen_context(system_u:object_r:suda_var_run_t,s0)
