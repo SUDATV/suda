@@ -26,7 +26,7 @@
 </tr>
 <tr>
 <td>Maximum Supply</td>
-<td>210 000 000 Suda</td>
+<td>21 000 000 Suda</td>
 </tr>
 <tr>
 <td>Minimum Stake Age</td>
