@@ -46,24 +46,7 @@
 </tr>
 </tbody>
 </table>
-<h2><strong>POW Rewards Distribution:</strong></h2>
-<table border="0" width="600" cellspacing="2" cellpadding="2">
-<tr>
-<td class="xl65" style="width: 120px; text-align: center;"><strong>Block Start</strong></td>
-<td class="xl65" style="width: 120px; text-align: center;"><strong>Block End</strong></td>
-<td class="xl65" style="width: 180px; text-align: center;"><strong>Pre-Mine</strong></td>
-</tr>
-<tr>
-<td class="xl65" style="width: 120px; text-align: center;">0</td>
-<td class="xl65" style="width: 120px; text-align: center;">1</td>
-<td class="xl65" style="width: 180px; text-align: center;">1 050 000 [Pre-Mine]</td>
-</tr>
-<tr>
-<td class="xl65" style="width: 120px; text-align: center;">2</td>
-<td class="xl65" style="width: 120px; text-align: center;">1440</td>
-<td class="xl65" style="width: 180px; text-align: center;">100 [For Network Stability]</td>
-</tr>
-</table>
+
 <br>
 <h2><strong>POS Rewards Distribution:</strong></h2>
 <table border="0" width="600" cellspacing="2" cellpadding="2"><colgroup><col width="26" /><col width="106" /><col width="98" /><col width="126" /><col width="130" /><col width="118" /></colgroup>
