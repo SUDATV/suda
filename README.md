@@ -4,7 +4,7 @@
 
 <br> More information at: <br>
  - Website [Suda](https://suda-tv.com)
- - Block Explorer [EXPLORER](http://104.155.183.25:3001/)
+ - Block Explorer [EXPLORER](http://explorer.suda-tv.com)
  - Join community in [DISCORD](https://discord.gg/u7sdY4b6Zb)
  - Github [GITHUB](https://github.com/SUDATV/suda)
   
