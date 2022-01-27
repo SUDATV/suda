@@ -48,7 +48,7 @@
 </table>
 
 <br>
-<h2><strong>POS Rewards Distribution:</strong></h2>
+<h2><strong>POS + MN Rewards Distribution:</strong></h2>
 <table border="0" width="600" cellspacing="2" cellpadding="2"><colgroup><col width="26" /><col width="106" /><col width="98" /><col width="126" /><col width="130" /><col width="118" /></colgroup>
 <tbody>
 <tr>
